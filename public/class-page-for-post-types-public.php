@@ -87,6 +87,8 @@ class Page_For_Post_Types_Public {
 				'slug'       => $shared->get_rewrite_slug( $page_for ),
 				'with_front' => false,
 			];
+
+      $args['has_archive'] = $shared->get_rewrite_slug( $page_for );
 			//TODO: DO we need this setting?
 			$args['post_type_page_id'] = $page_for;
 

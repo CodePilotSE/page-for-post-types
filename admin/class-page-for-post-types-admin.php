@@ -61,7 +61,8 @@ class Page_For_Post_Types_Admin {
 		$shared     = new Page_For_Post_Types_Shared( $this->plugin_name, $this->version );
 		$post_types = $shared->get_page_for_post_type_objects();
 
-		$page_for_post_types_keys = get_option( 'page_for_post_types_keys' );
+		$page_for_post_types_keys = get_option('page_for_post_types_keys', []); // Set default as empty array
+
 
 		foreach ( $post_types as $post_type ) {
 			$option_name        = $shared->option_name( $post_type->name );
